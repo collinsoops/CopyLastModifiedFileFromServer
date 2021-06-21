@@ -31,13 +31,18 @@ public class main {
 
 
             File lastOne= getLatestFilefromDir(remoteDirectoryCopyFrom);
-
+            File all= new File(remoteDirectoryCopyFrom + lastOne);
             String file = lastOne.toString();
 
             String finalDirectory=remoteDirectoryCopyFrom+"\\"+file;
-            //System.out.println(finalDirectory);
 
-//            File dir = new File("C:\\Users\\Kenya Aliens IT\\Desktop\\sp");
+
+                      if (all.exists()) {
+                          //System.out.println(finalDirectory)
+                          all.delete();
+                      }
+//                          }
+//                          File dir = new File("C:\\Users\\Kenya Aliens IT\\Desktop\\sp");
 //            String[] children = dir.list();
 //            if (children == null) {
 //                System.out.println("does not exist or is not a directory");
